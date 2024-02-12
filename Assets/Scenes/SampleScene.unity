@@ -469,7 +469,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1229351721}
-  m_Layer: 0
+  - component: {fileID: 1229351723}
+  - component: {fileID: 1229351722}
+  m_Layer: 6
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,6 +494,63 @@ Transform:
   - {fileID: 302060583}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229351722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229351720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dd0390653ddec4293e800c37c95ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1229351723
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229351720}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10}
+  m_EdgeRadius: 0
 --- !u!1 &1324157924
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +565,7 @@ GameObject:
   - component: {fileID: 1324157929}
   - component: {fileID: 1324157928}
   - component: {fileID: 1324157930}
+  - component: {fileID: 1324157931}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -680,6 +740,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1324157925}
   runSpeed: 40
+--- !u!114 &1324157931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324157924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740294c59267dd3428c2af09f96a497e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 3
+  Swords: 3
 --- !u!1 &1835542590
 GameObject:
   m_ObjectHideFlags: 0
