@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] int HP = 3;
     [SerializeField] int Swords = 3;
+    [SerializeField] private Transform P1;
+    [SerializeField] private Transform P2;
+    [SerializeField] private Transform PlayersTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -14,9 +18,13 @@ public class PlayerStats : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+        if (PlayersTransform.position.x > P2.position.x ||
+            PlayersTransform.position.x < P1.position.x ||
+            PlayersTransform.position.y > P2.position.y ||
+            PlayersTransform.position.y < P1.position.y)
+            Die();
     }
 
     void TakeDamage(int damage)
